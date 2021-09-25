@@ -77,7 +77,7 @@ body {
 }
 .exp_btn {
   position: absolute;
-  top: .8rem;
+  top: 0.8rem;
   left: 25rem;
   display: flex;
   width: 12rem;
@@ -89,17 +89,17 @@ body {
   font-size: smaller;
   padding: 0 0.5rem 0 0;
   color: #558abb;
-  box-shadow:4px 4px 2px #558abb;
+  box-shadow: 4px 4px 2px #558abb;
 }
-.exp_btn:active{
+.exp_btn:active {
   transform: translateY(4px);
-  box-shadow:none;
+  box-shadow: none;
 }
 .exp_btn:hover {
   background-color: cornflowerblue;
   color: #fff;
 }
-a.exp_btn svg{
+a.exp_btn svg {
   transform: rotate(90deg);
 }
 a.exp_btn:hover svg {
@@ -183,6 +183,12 @@ a.exp_btn span {
   list-style: none;
   margin-left: 15px;
   text-transform: uppercase;
+}
+.list_item a,
+.list_item a:visited {
+  color: #558abb;
+  text-transform: initial;
+  text-decoration: none;
 }
 footer {
   margin: 20px 0;
