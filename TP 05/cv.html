@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="cv.css" />
+    <link rel="stylesheet" href="./image/svg-icon.css" />
     <title>Parcours Professionnel</title>
   </head>
   <body>
@@ -44,7 +45,16 @@
       </div>
     </header>
     <main>
-      <h2 class="title exp-title">Expériences Professionnelles</h2>
+      <h2 class="title exp-title">
+        Expériences Professionnelles
+
+        <a class="exp_btn title" href="./parcours-pro.html">
+          <svg class="icon icon_menu" style="width: 1em; height: 2.5em">
+            <use xlink:href="./image/SVG/symbol-defs.svg#icon-arrow-up"></use>
+          </svg>
+          <span>explication</span></a
+        >
+      </h2>
       <section class="exp">
         <section class="exp_col">
           <div class="exp_row-1">
@@ -223,8 +233,12 @@
             <li class="hobby_item list_item">Programmation</li>
           </ul>
           <section class="video">
-
-              <video src="./image/running-trail.mp4" autoplay width="250" loop></video>
+            <video
+              src="./image/running-trail.mp4"
+              autoplay
+              width="250"
+              loop
+            ></video>
           </section>
         </section>
       </section>
@@ -233,15 +247,31 @@
       <h2 class="title footer_title">Contact</h2>
       <section class="footer_contact">
         <div class="footer footer_contact-tel">
-            <label for="tel">TEL :</label>
-           <input type="number" placeholder="07 84 77 36 13" name="tel" id="tel" disabled >
-         
+          <svg class="icon icon-phone">
+            <use xlink:href="./image/SVG/symbol-defs.svg#icon-phone"></use>
+          </svg>
+          <label for="tel">TEL :</label>
+          <input
+            type="number"
+            placeholder="07 84 77 36 13"
+            name="tel"
+            id="tel"
+            disabled
+          />
         </div>
         <div class="footer footer_contact-mail">
-            <label for="link">E-mail :</label>
-          <a id="link"href="mailto:yvan.pallies@laposte.fr">yvan.pallies@laposte.fr</a>
+          <svg class="icon icon-envelop">
+            <use xlink:href="./image/SVG/symbol-defs.svg#icon-envelop"></use>
+          </svg>
+          <label for="link">E-mail :</label>
+          <a id="link" href="mailto:yvan.pallies@laposte.fr"
+            >yvan.pallies@laposte.fr</a
+          >
         </div>
         <address class="footer footer_contact-adress">
+          <svg class="icon icon-location">
+            <use href="./image/SVG/symbol-defs.svg#icon-location"></use>
+          </svg>
           6 près du centre ville,<br />85600 Montaigu-Vendée
         </address>
       </section>
