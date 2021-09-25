@@ -170,6 +170,7 @@ a.exp_btn span {
   font-weight: 700;
 }
 .exp_add {
+  position: relative;
   flex: 0.3;
   border: 1px solid #558abb;
   box-shadow: 5px 5px #558abb;
@@ -189,6 +190,13 @@ a.exp_btn span {
   color: #558abb;
   text-transform: initial;
   text-decoration: none;
+}
+#link_text{
+position: absolute;
+bottom: 1rem;
+left:1rem;
+font-style: italic;
+  color: gray;
 }
 footer {
   margin: 20px 0;
