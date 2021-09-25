@@ -31,6 +31,7 @@ h3{
 #nav .nav_list li a:active,
 #nav .nav_list li a:hover,
 #nav .nav_list li a:visited {
+  position: relative;
   text-decoration: none;
   display: inline-block;
   width: 120px;
@@ -46,6 +47,15 @@ h3{
   background: cornflowerblue;
   margin: 0 auto 5px auto;
 
+}
+#nav .nav_list li a:hover::after{
+  content: '';
+  display: block;
+  width: 100%;
+  position: absolute;
+  top:5rem;
+  left:0;
+  border-bottom:2px solid #bb5590;
 }
 
 .exp_description {
