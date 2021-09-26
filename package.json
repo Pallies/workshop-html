@@ -1,0 +1,27 @@
+{
+  "name": "workshop-html.git",
+  "version": "1.0.0",
+  "description": "cours Diginamic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:css":"node-sass TP-jquery/sass/main.scss TP-jquery/css/style.css -w"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pallies/workshop-html.git"
+  },
+  "author": "yvan Palliès",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pallies/workshop-html/issues"
+  },
+  "homepage": "https://github.com/Pallies/workshop-html#readme",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1"
+  }
+}

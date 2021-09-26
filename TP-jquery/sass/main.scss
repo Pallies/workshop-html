@@ -1,0 +1,64 @@
+// Thèmes Bootswatch Darkly
+@import "./themes";
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $gray-400;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &_top {
+    background-color: $primary;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a,
+    a:visited,
+    a:active,
+    span {
+      padding-left: 1rem;
+      color: $gray-600;
+      text-decoration: none;
+    }
+  }
+  &_middle {
+    & ul {
+      height: 5rem;
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      align-items: center;
+      & li {
+        width: 200px;
+      }
+      & a {
+        color: $gray-dark;
+        text-decoration: none;
+        align-self: stretch;
+        margin: auto 1rem;
+       
+      }
+    }
+    &-svg {
+      width: 30px;
+      height: 30px;
+      fill: $cyan;
+      transform: translateY(70%) rotate(90deg);
+    }
+  }
+  &_bottom {
+    transform: translateY(-5rem);
+    z-index: -1;
+    background: $white center/100%
+      url("./../images/ross-parmly-rf6ywHVkrlY-unsplash.jpg") no-repeat;
+    height: 15rem;
+  }
+}
