@@ -14,20 +14,42 @@
   </head>
   <body>
     <!-- Corps de la page -->
-<div class="jumbotron text-center" style="margin-bottom: 0;">
-  <!-- HEADER Titre de la page -->
-  <h1 class="display-2">Exemple d'utilisation de Bootstrap</h1>
-</div>
+    <div class="jumbotron text-center" style="margin-bottom: 0">
+      <!-- HEADER Titre de la page -->
+      <h1 class="display-2">Exemple d'utilisation de Bootstrap</h1>
+    </div>
 
     <!-- MENU PRINCIPAL -->
-    <nav class="navbar nacbar-expand-sm bg-dark navbar-dark">
-
-      <div>
-        <a href="#">Accueil</a> - <a href="#">Cours HTML</a> -
-        <a href="#">Cours CSS</a> - <a href="#">Cours PHP</a> -
-        <a href="#">Cours Javascript</a>
-      </div>
-    </nav> 
+    <div>
+      <nav class="navbar navbar-expand-m bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Accueil</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#menu-collapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Cours HTML</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Cours CSS</a>
+            </li>
+            <div class="dropdown-divider"></div>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Cours PHP</a>
+            </li>
+            <li class="nav-item mx-3">
+              <a class="nav-link" href="#">Cours Javascript</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
 
     <!-- ZONE PRINCIPALE -->
     <div>
@@ -106,7 +128,7 @@ Tapez votre message ici</textarea
       </div>
     </div>
     <div>&copy; 2018 - Ne pas prendre exemple !</div>
-    <script src="./script/jquery-1.9.1.min.js"></script>
+    <script src="./script/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
     <script src="./packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
   </body>
