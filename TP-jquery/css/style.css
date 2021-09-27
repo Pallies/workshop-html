@@ -26,8 +26,16 @@
       text-decoration: none; }
     .navbar_top-close {
       position: absolute;
+      cursor: pointer;
       top: 2rem;
       right: 4rem; }
+  .navbar_top::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 5rem;
+    width: 100%;
+    z-index: -1; }
   .navbar_middle-link {
     height: 100%;
     display: flex;
@@ -51,4 +59,4 @@
     transform: translateY(-5rem);
     z-index: -1;
     background: #fff center/100% url("./../images/ross-parmly-rf6ywHVkrlY-unsplash.jpg") no-repeat;
-    height: 15rem; }
+    height: 25rem; }

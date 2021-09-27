@@ -31,11 +31,25 @@
     }
     &-close {
       position: absolute;
+      cursor: pointer;
       top: 2rem;
       right: 4rem;
     }
   }
+  &_top::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 5rem;
+    width: 100%;
+    z-index: -1;
+  }
   &_middle {
+    // &-covertop {
+    //   position: absolute;
+    //   display: block;
+    //   height: 5rem;
+    // }
     &-link {
       height: 100%;
       display: flex;
@@ -64,6 +78,6 @@
     z-index: -1;
     background: $white center/100%
       url("./../images/ross-parmly-rf6ywHVkrlY-unsplash.jpg") no-repeat;
-    height: 15rem;
+    height: 25rem;
   }
 }
