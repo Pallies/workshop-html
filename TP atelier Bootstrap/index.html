@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-tofit=
+no"
+    />
+    <!-- Icon - font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+    />
+    <title>SGP - Accueil</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"> SGP </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTarget"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTarget">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Collaborateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Statistiques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"> Activités </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="mb-5">
+        <div class="container-fluid">
+          <div ="row">
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-success mt-3">
+                Ajouter un nouveau collaborateur
+              </button>
+            </div>
+          </div>
+          <div class="row mx-4">
+            <h1 class="display-4">Les collaborateurs</h1>
+          </div>
+          <div class="row mx-4">
+            <div class="form-group d-flex col-8 justify-content-center">
+              <label for="input_search"
+                >Rechercher un nom ou un prénom qui commence par :</label
+              >
+              <input
+                type="text"
+                name="search"
+                id="input_search"
+                class="form-control col-3 mx-4"
+              />
+              <button type="button" class="btn btn-info">
+                <i class="fa fa-search mr-3"></i>Rechercher
+              </button>
+            </div>
+            <div class="col-4">
+              <div class="input-group-prepend">
+                <input
+                  class="mr-3"
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                Voir les collaborateurs désactivés
+              </div>
+            </div>
+          </div>
+          <div class="row ml-4">
+            <div class="form-group d-flex col-8 justify-content-center">
+              <label for="select_dep" class="">Filter par département :</label>
+              <div class="mx-4">
+                <select id="select_dep" class="custom-select">
+                  <option selected>Tous</option>
+                  <option value="1">Comptabilité</option>
+                  <option value="2">Ressources Humaines</option>
+                  <option value="3">Informatique</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="container-fluid">
+          <aside class="d-flex row  align-items-center">
+            <article class="col-4 mb-4 d-flex justify-content-center ">
+              <div class="card  " style="width: 28rem;">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>Amina Haunting</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="./images/art-hauntington-jzY0KRJopEI-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Directrice</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">amina.hauting@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 90 00</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-4 mb-4 d-flex justify-content-center">
+              <div class="card" style="width: 28rem">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>Jake Nackman</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="./images/jake-nackos-IF9TK5Uy-KI-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Communication</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">jake.nackman@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 90 01</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-4 mb-4 d-flex justify-content-center">
+              <div class="card" style="width: 28rem">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>Nishan Avva</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="./images/nishanth-avva-SdCaK9YKdwk-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Dev Back-end</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">nishan.avva@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 76 07</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-4 mb-4 d-flex justify-content-center">
+              <div class="card" style="width: 28rem">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>Robbie Downer</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="./images/robbie-down-f3vwAXn7pgg-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Dev Full Stack</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">robbie.downer@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 85 56</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-4 mb-4 d-flex justify-content-center">
+              <div class="card" style="width: 28rem">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>cédric darshan</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="./images/darshan-patel-QJEVpydulGs-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Dev front</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">cedric.darshan@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 23 98</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article class="col-4 mb-4 d-flex justify-content-center">
+              <div class="card" style="width: 28rem">
+                <div class="card-header">
+                  <div class="card-title">
+                    <h5>Hamid Kijta</h5>
+                  </div>
+                </div>
+                <div class="card-body d-flex">
+                  <div class="mr-2 my-auto">
+                    <img
+                      class="card-img-top"
+                      src="images/hamid-tajik-uvnApE6gmnM-unsplash.jpg"
+                      alt=""
+                      style="width: 8rem"
+                    />
+                  </div>
+                  <div class="col">
+                    <div class="func d-flex">
+                      <h6>Fonction :</h6>
+                      <p class="pl-3">Designer</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Département :</h6>
+                      <p class="pl-3">Vendée</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Email :</h6>
+                      <p class="pl-3">hamid.kijta@www.fr</p>
+                    </div>
+                    <div class="func d-flex">
+                      <h6>Téléphone :</h6>
+                      <p class="pl-3">+45 78 45 34 06</p>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button class="btn btn-danger">Editer</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <!-- TODO -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./script/jquery.min.js"></script>
+    <script src="./script/popper.min.js"></script>
+    <script src="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
