@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-tofit=
+no"
+    />
+    <!-- Icon - font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>SGP - App</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"> SGP </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTarget"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- LIST NAVBAR MENU -->
+        <div class="collapse navbar-collapse" id="navbarTarget">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Collaborateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Statistiques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"> Activités </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="row m-5">
+          <div class="col-4 d-flex justify-content-center">
+            <img
+              class="align-self-center"
+              style="width: 400px; height: 400px"
+              src="./images/art-hauntington-jzY0KRJopEI-unsplash.jpg"
+              alt="Card image cap"
+            />
+          </div>
+          <div class="offset-1 col-5">
+            <div class="mb-4 d-flex align-items-end">
+              <h1 class="">NOM</h1>
+              <h1 class="mx-4">Prénom</h1>
+              <span class="display-4"> - </span>
+              <h3 class="mx-4">Matricule</h3>
+              <div class="pb-2 input-group-prepend offset-1">
+                <input
+                  class="mr-3 d-flex align-self-center"
+                  type="checkbox"
+                  aria-label="Checkbox for following text input"
+                />
+                <p class="my-auto">Désactiver</p>
+              </div>
+            </div>
+
+            <div class="accordion">
+              <!-- IDENTITY -->
+              <div class="card" style="width: 100%">
+                <div class="card-header alert-info">
+                  <h5 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#identity"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Identité
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="identity"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="card-body">
+                    <div class="container">
+                      <!-- ROW CIVILITE -->
+                      <div class="row">
+                        <div class="form-group d-flex col pb-32">
+                          <label for="select_genre" class="col-6"
+                            ><h5 class="text-right mr-5">Civilité :</h5></label
+                          >
+                          <div class="mx-4 col-6">
+                            <select id="select_genre" class="custom-select">
+                              <option value="1" selected>Femme</option>
+                              <option value="2">Homme</option>
+                              <option value="3">-</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- ROW NAME -->
+                    <div class="row">
+                      <div class="form-group d-flex col pb-32">
+                        <label for="name" class="col-6">
+                          <h5 class="text-right mr-5">Nom :</h5>
+                        </label>
+                        <input
+                          id="name"
+                          type="text"
+                          class="form-control col-6"
+                        />
+                      </div>
+                    </div>
+                    <!-- ROW LASTNAME -->
+                    <div class="row">
+                      <div class="form-group d-flex col pb-32">
+                        <label for="firstname" class="col-6"
+                          ><h5 class="text-right mr-5">Prénom :</h5></label
+                        >
+                        <input
+                          id="firstname"
+                          type="text"
+                          class="form-control col-6"
+                        />
+                      </div>
+                    </div>
+                    <!-- ROW DATE DE NAISSANCE -->
+                    <div class="row">
+                      <div class="form-group d-flex col pb-32">
+                        <label for="birthday" class="col-6"
+                          ><h5 class="text-right mr-5">
+                            Date de naissance :
+                          </h5></label
+                        >
+                        <input type="text" id="birthday" class="form-control" />
+                      </div>
+                    </div>
+                    <!-- ROW ADDRESS -->
+                    <div class="row">
+                      <div class="form-group col d-flex pb-32">
+                        <label for="address" class="col-6"
+                          ><h5 class="text-right mr-5">Adresse :</h5></label
+                        >
+                        <textarea
+                          name="adresse"
+                          id="address"
+                          class="col-6 form-control"
+                          cols="30"
+                          rows="5"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <!-- ROW SOCIAL SECURITY -->
+                    <div class="row">
+                      <div class="form-group col d-flex pb-32">
+                        <label for="social_secu" class="col-6"
+                          ><h5 class="text-right mr-5">
+                            Numéro de Sécurité Sociale :
+                          </h5></label
+                        >
+                        <input
+                          type="tel"
+                          name="social_security"
+                          id="social_secu"
+                          class="col-6 form-control"
+                        />
+                      </div>
+                    </div>
+                    <!-- ROW TELEPHONE -->
+                    <div class="row">
+                      <div class="form-group col d-flex pb-32">
+                        <label for="telephone" class="col-6"
+                          ><h5 class="text-right mr-5">Téléphone :</h5></label
+                        >
+                        <input
+                          type="tel"
+                          name="tel"
+                          id="telephone"
+                          class="col-6 form-control"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- POSTE -->
+              <div class="card" style="width: 100%">
+                <div class="card-header alert-info">
+                  <h5 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#poste"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Poste
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="poste"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div class="card-body">
+                        <!-- ROW DEPT -->
+                        <div class="row">
+                          <div class="form-group col d-flex pb-32">
+                            <label for="post_dep" class="col-4"
+                              ><h5 class="text-right mr-5">
+                                Département :
+                              </h5></label
+                            >
+                            <input
+                              type="tel"
+                              name="dep"
+                              id="post_dep"
+                              class="col-6 form-control"
+                            />
+                          </div>
+                        </div>
+                        <!-- ROW DEPT NOM -->
+                        <div class="row">
+                          <div class="form-group col d-flex pb-32">
+                            <label for="post_dep_name" class="col-4"
+                              ><h5 class="text-right mr-5">Nom :</h5></label
+                            >
+                            <input
+                              type="tel"
+                              name="dep_name"
+                              id="post_dep_name"
+                              class="col-6 form-control"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- IBAN -->
+              <div class="card" style="width: 100%">
+                <div class="card-header alert-info">
+                  <h5 class="mb-0">
+                    <button
+                      type="button"
+                      class="btn btn-link"
+                      data-toggle="collapse"
+                      data-target="#iban"
+                      aria-expanded="true"
+                      aria-controls="collapseOne"
+                    >
+                      Coordonnées Bancaires
+                    </button>
+                  </h5>
+                </div>
+                <div
+                  id="iban"
+                  class="collapse show"
+                  aria-labelledby="headingOne"
+                  data-parent="#accordion"
+                >
+                  <div class="container">
+                    <div class="row">
+                      <div class="card-body">
+                        <div class="card-body">
+                          <!-- ROW IBAN -->
+                          <div class="row">
+                            <div class="form-group col d-flex pb-32">
+                              <label for="post_iban" class="col-4"
+                                ><h5 class="text-right mr-5">IBAN :</h5></label
+                              >
+                              <input
+                                type="tel"
+                                name="iban"
+                                id="post_iban"
+                                class="col-6 form-control"
+                              />
+                            </div>
+                          </div>
+                          <!-- ROW BIC -->
+                          <div class="row">
+                            <div class="form-group col d-flex pb-32">
+                              <label for="post_bic" class="col-4"
+                                ><h5 class="text-right mr-5">BIC :</h5></label
+                              >
+                              <input
+                                type="tel"
+                                name="bic"
+                                id="post_bic"
+                                class="col-6 form-control"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn btn-success mt-5 offset-9 px-5 offset-1">
+                Sauvegarder
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- TODO -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./script/jquery.min.js"></script>
+    <script src="./script/popper.min.js"></script>
+    <script src="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
