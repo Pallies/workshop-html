@@ -26,6 +26,7 @@
       text-decoration: none; }
     .navbar_top-close {
       position: absolute;
+<<<<<<< HEAD
       cursor: pointer;
       top: 2rem;
       right: 4rem; }
@@ -36,6 +37,10 @@
     height: 5rem;
     width: 100%;
     z-index: -1; }
+=======
+      top: 2rem;
+      right: 4rem; }
+>>>>>>> 92bf24f0e93dcb7110340ff1b66f631ef5d90426
   .navbar_middle-link {
     height: 100%;
     display: flex;
