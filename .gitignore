@@ -3,4 +3,4 @@ node_modules/
 
 # ignore project JQuery
 TP 05/
-TP 06/packages/
+*/packages/
