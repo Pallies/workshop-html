@@ -14,9 +14,10 @@
       rel="stylesheet"
       href="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
     />
-    <title>Document</title>
+    <title>Collaborateur</title>
   </head>
   <body>
+    <!-- NAVBAR -->
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
         <a href="#" class="navbar-brand"> SGP </a>
@@ -47,27 +48,31 @@
       </nav>
     </header>
     <main>
+      <!-- FORM -->
       <div class="container-fluid">
         <div ="row" style="margin-top: 2rem">
-          <div class="row m-4">
+          <div class="col m-4">
             <h1 class="display-4">Nouveau Collaborateur</h1>
           </div>
         </div>
       </div>
-      <div class="container">
-        <form action="#" method="post">
+      <form action="#" method="post">
+        <div class="container">
+          <!-- ROW NAME -->
           <div class="row">
             <div class="form-group d-flex col">
               <label for="name" class="col-6"><h4>Nom :</h4></label>
               <input id="name" type="text" class="form-control col-6" />
             </div>
           </div>
+          <!-- ROW LASTNAME -->
           <div class="row">
             <div class="form-group d-flex col">
               <label for="firstname" class="col-6"><h5>Prénom :</h5></label>
               <input id="firstname" type="text" class="form-control col-6" />
             </div>
           </div>
+          <!-- ROW DATE DE NAISSANCE -->
           <div class="row">
             <div class="form-group d-flex col">
               <label for="birthday" class="col-6"
@@ -76,6 +81,7 @@
               <input type="text" id="birthday" class="form-control" />
             </div>
           </div>
+          <!-- ROW ADDRESS -->
           <div class="row">
             <div class="form-group col d-flex">
               <label for="address" class="col-6"><h5>Adresse</h5></label>
@@ -88,6 +94,7 @@
               ></textarea>
             </div>
           </div>
+          <!-- ROW SOCIAL SECURITY -->
           <div class="row">
             <div class="form-group col d-flex">
               <label for="social_secu" class="col-6"
@@ -103,12 +110,75 @@
           </div>
           <div class="row mt-3">
             <div class="col d-flex justify-content-end">
-              <button class="btn btn-lg btn-success">Créer</button>
+              <button
+              type="button"
+                class="btn btn-lg btn-success"
+                data-toggle="modal"
+                data-target="#confirm_modal"
+              >
+                Créer
+              </button>
             </div>
           </div>
-        </form>
-      </div>
+        </div>
+      </form>
     </main>
+    <!-- MODAL -->
+      <div class="modal fade" id="confirm_modal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg " role="document" >
+          <div class="modal-content" >
+            <div class="modal-header">
+              <div class="alert-info modal-title w-100 ">
+                <h5 class="p-2">Création d'un collaborateur</h5>
+              </div>
+            </div>
+            <div class="modal-body" style="height: 300px;">
+              <!-- MODAL CONTENT -->
+              <div class="container">
+                <div class="row my-4"style="width:700px">
+                  <h5 class="col">
+                    Vous êtes sur le point de créer un nouveau collaborateur :
+                  </h5>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">Nom :</div>
+                  <div class="col" id="name_modal"></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">Prénom :</div>
+                  <div class="col" id="lastname_modal"></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">Date de naissance :</div>
+                  <div class="col" id="birthday_modal"></div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col">Adresse :</div>
+                  <div class="col" id="adress_modal"></div>
+                </div>
+                <div class="row " style="margin-bottom: 5rem;">
+                  <div class="col">Numéro de sécurité sociale :</div>
+                  <div class="col" id="social_modal"></div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer mt-5">
+              <button
+                class="btn btn-secondary"
+                type="button"
+                data-dismiss="modal"
+              >
+                Annuler
+              </button>
+              <button class="btn btn-success" type="button">Confirmer</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
     <script src="./script/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
     <script src="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
