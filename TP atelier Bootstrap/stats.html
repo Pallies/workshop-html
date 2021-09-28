@@ -14,85 +14,117 @@
       rel="stylesheet"
       href="./../TP_06_Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/stats.css">
+    <link rel="stylesheet" href="./css/stats.css" />
     <title>SGP-stats</title>
   </head>
   <body>
-    <div class="container-fluid">
-      <!-- ADD USER - BUTTON LEFT-->
-      <div class="row d-flex justify-content-end">
-        <div class="m-3">
-          <a href="./creer.html" class="link-btn">
-            Ajouter un nouveau collaborateur
-          </a>
+    <!-- NAVBAR -->
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <a href="#" class="navbar-brand"> SGP </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarTarget"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- LIST NAVBAR MENU -->
+        <div class="collapse navbar-collapse" id="navbarTarget">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link " href="#">Collaborateurs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Statistiques</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"> Activités </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <!-- ADD USER - BUTTON LEFT-->
+        <div class="row d-flex justify-content-end">
+          <div class="m-3">
+            <a href="./creer.html" class="link-btn">
+              Ajouter un nouveau collaborateur
+            </a>
+          </div>
+        </div>
+        <div class="jumbotron display-4">Statistiques</div>
+        <div class="offset-1 col-10">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Chemin</th>
+                <th scope="col">Nombre de visites</th>
+                <th scope="col">Min (ms)</th>
+                <th scope="col">Max (ms)</th>
+                <th scope="col">Moyenne (ms)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">/collaborateur/lister</th>
+                <th scope="row">125</th>
+                <th scope="row">5</th>
+                <th scope="row">600</th>
+                <th scope="row">90</th>
+              </tr>
+              <tr>
+                <th scope="row">/collaborateur/nouveau</th>
+                <th scope="row">200</th>
+                <th scope="row">2</th>
+                <th scope="row">58</th>
+                <th scope="row">789</th>
+              </tr>
+              <tr>
+                <th scope="row">/collaborateur/editer</th>
+                <th scope="row">500</th>
+                <th scope="row">10</th>
+                <th scope="row">1000</th>
+                <th scope="row">500</th>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+              </tr>
+              <tr>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+                <th scope="row"></th>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-      <div class="jumbotron display-4">Statistiques</div>
-      <div class="offset-1 col-10">
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Chemin</th>
-              <th scope="col">Nombre de visites</th>
-              <th scope="col">Min (ms)</th>
-              <th scope="col">Max (ms)</th>
-              <th scope="col">Moyenne (ms)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">/collaborateur/lister</th>
-              <th scope="row">125</th>
-              <th scope="row">5</th>
-              <th scope="row">600</th>
-              <th scope="row">90</th>
-            </tr>
-            <tr>
-              <th scope="row">/collaborateur/nouveau</th>
-              <th scope="row">200</th>
-              <th scope="row">2</th>
-              <th scope="row">58</th>
-              <th scope="row">789</th>
-            </tr>
-            <tr>
-              <th scope="row">/collaborateur/editer</th>
-              <th scope="row">500</th>
-              <th scope="row">10</th>
-              <th scope="row">1000</th>
-              <th scope="row">500</th>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-              <th scope="row"></th>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
+    </main>
     <!-- SCRIPT -->
     <script src="./script/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
