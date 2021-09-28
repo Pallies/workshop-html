@@ -6,6 +6,7 @@ function ClientUser(id, name, password) {
   // buildRow
   this.createRowTable = function () {
     let tr = document.createElement("tr");
+    tr.className = "table-success";
     return this.buildTh(tr);
   };
   // buildCol
@@ -42,8 +43,14 @@ form_userAdd.onsubmit = (e) => {
   var lastElement = document.querySelectorAll("tr");
   var id = lastElement.length;
   var name = form_userAdd.name.value;
-  var password = form_userAdd.password.value;
-  var row = new ClientUser(id, name, password);
-  lastElement[--id].parentElement.appendChild(row.createRowTable());
+
+  // condition for write new user
+  if (typeof password === "undefined" && name !== "") {
+    var password = form_userAdd.password.value;
+    var row = new ClientUser(id, name, password);
+    var lastEl = lastElement[--id];
+    lastEl.classList.remove("table-success");
+    lastEl.parentElement.appendChild(row.createRowTable());
+  }
   resetForm();
 };
