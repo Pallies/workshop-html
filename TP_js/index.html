@@ -11,14 +11,15 @@
     <title>Ajout d'utilisateur</title>
   </head>
   <body>
-    <head>
+    <header>
       <div class="jumbotron display-4">Ajouter un utilisateur</div>
-    </head>
+    </header>
     <main>
       <div class="container">
         <div class="row">
           <div class="col">
-            <form name="form_users-add" action="">
+            <form name="form_userAdd" 
+            method="#"action="#">
               <div class="form-group d-flex">
                 <label for="inputName" class="col-4">Nom :</label>
                 <input
@@ -38,7 +39,12 @@
                 />
               </div>
 
-              <button class="btn btn-success mt-5" style="width: 200px">
+              <button
+                id="btn_addUser"
+                class="btn btn-success mt-5"
+                style="width: 200px"
+                type="submit"
+              >
                 Ajouter
               </button>
             </form>
@@ -46,39 +52,42 @@
         </div>
       </div>
       <section>
-          <div class="jumbotron display-4 mt-3">Liste Utilisateurs</div>
-<div class="container">
-    <div class="row">
-        <table class="table table-striped" style="border: 2px solid #000;">
-            <thead>
+        <div class="jumbotron display-4 mt-3">Liste Utilisateurs</div>
+        <div class="container">
+          <div class="row">
+            <table id="table_users"class="table table-striped" style="border: 2px solid #000">
+              <thead>
                 <tr>
-                    <th scope="col">id</th>
-                    <th scope="col">nom</th>
-                    <th scope="col">mot de passe</th>
+                  <th scope="col">id</th>
+                  <th scope="col">nom</th>
+                  <th scope="col">mot de passe</th>
                 </tr>
-            </thead>
-            <tbody>
+              </thead>
+              <tbody>
                 <tr>
-                    <th scope="row">1</th>
-                    <th scope="row">John</th>
-                    <th scope="row">123</th>
+                  <th scope="row">1</th>
+                  <th scope="row">John</th>
+                  <th scope="row">123</th>
                 </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row">Bob</th>
-                    <th scope="row">123</th>
+                <tr>
+                  <th scope="row">2</th>
+                  <th scope="row">Bob</th>
+                  <th scope="row">123</th>
                 </tr>
-                  <tr>
-                    <th scope="row">1</th>
-                    <th scope="row">Jack</th>
-                    <th scope="row">123</th>
+                <tr>
+                  <th scope="row">3</th>
+                  <th scope="row">Jack</th>
+                  <th scope="row">123</th>
                 </tr>
-            </tbody>
-        </table>
-    </div>
-</div>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </section>
     </main>
-    <script src="./../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./../TP_06_Bootstrap/script/jquery.min.js"></script>
+    <script src="./../TP_06_Bootstrap/script/popper.min.js"></script>
+    <script src="./../TP_06_Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="./script/index.js"></script>
   </body>
 </html>
