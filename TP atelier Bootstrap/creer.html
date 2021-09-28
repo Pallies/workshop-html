@@ -12,9 +12,10 @@
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
+      href="./../TP_06_Bootstrap/packages/bootstrap-4.0.0/dist/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="./css/creer-style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/creer-style.css" />
     <title>Collaborateur</title>
   </head>
   <body>
@@ -27,7 +28,6 @@
           type="button"
           data-toggle="collapse"
           data-target="#navbarTarget"
-          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
@@ -51,8 +51,8 @@
     <main>
       <!-- FORM -->
       <div class="container-fluid">
-        <div ="row mt-3">
-          <div class="jumbotron col m-4" >
+        <div class="row mt-3">
+          <div class="jumbotron col m-4">
             <h1 class="display-4">Nouveau Collaborateur</h1>
           </div>
         </div>
@@ -60,24 +60,26 @@
       <form action="#" method="post">
         <div class="container">
           <!-- ROW NAME -->
-          <div class="row " >
+          <div class="row">
             <div class="form-group d-flex col pb-32">
-              <label for="name" class="col-6"><h4>Nom :</h4></label>
+              <label for="name" class="col-6"><span>Nom :</span></label>
               <input id="name" type="text" class="form-control col-6" />
             </div>
           </div>
           <!-- ROW LASTNAME -->
           <div class="row">
             <div class="form-group d-flex col pb-32">
-              <label for="firstname" class="col-6"><h5>Prénom :</h5></label>
+              <label for="firstname" class="col-6"
+                ><span class="h5">Prénom :</span></label
+              >
               <input id="firstname" type="text" class="form-control col-6" />
             </div>
           </div>
           <!-- ROW DATE DE NAISSANCE -->
-          <div class="row ">
+          <div class="row">
             <div class="form-group d-flex col pb-32">
               <label for="birthday" class="col-6"
-                ><h5>Date de naissance :</h5></label
+                ><span class="h5">Date de naissance :</span></label
               >
               <input type="text" id="birthday" class="form-control" />
             </div>
@@ -85,7 +87,9 @@
           <!-- ROW ADDRESS -->
           <div class="row">
             <div class="form-group col d-flex pb-32">
-              <label for="address" class="col-6"><h5>Adresse</h5></label>
+              <label for="address" class="col-6"
+                ><span class="h5">Adresse</span></label
+              >
               <textarea
                 name="adresse"
                 id="address"
@@ -99,7 +103,7 @@
           <div class="row">
             <div class="form-group col d-flex pb-32">
               <label for="social_secu" class="col-6"
-                ><h5>Numéro de Sécurité Sociale</h5></label
+                ><span class="h5">Numéro de Sécurité Sociale</span></label
               >
               <input
                 type="tel"
@@ -112,7 +116,7 @@
           <div class="row mt-3">
             <div class="col d-flex justify-content-end">
               <button
-              type="button"
+                type="button"
                 class="btn btn-lg btn-success"
                 data-toggle="modal"
                 data-target="#confirm_modal"
@@ -125,63 +129,66 @@
       </form>
     </main>
     <!-- MODAL -->
-      <div class="modal fade" id="confirm_modal"  tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg " role="document" >
-          <div class="modal-content" >
-            <div class="modal-header">
-              <div class="alert-info modal-title w-100 ">
-                <h5 class="p-2">Création d'un collaborateur</h5>
+    <div
+      class="modal fade"
+      id="confirm_modal"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="alert-info modal-title w-100">
+              <h5 class="p-2">Création d'un collaborateur</h5>
+            </div>
+          </div>
+          <div class="modal-body h-300">
+            <!-- MODAL CONTENT -->
+            <div class="container">
+              <div class="row my-4 w-700">
+                <h5 class="col">
+                  Vous êtes sur le point de créer un nouveau collaborateur :
+                </h5>
+              </div>
+              <div class="row mb-2">
+                <div class="col">Nom :</div>
+                <div class="col" id="name_modal"></div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">Prénom :</div>
+                <div class="col" id="lastname_modal"></div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">Date de naissance :</div>
+                <div class="col" id="birthday_modal"></div>
+              </div>
+              <div class="row mb-2">
+                <div class="col">Adresse :</div>
+                <div class="col" id="adress_modal"></div>
+              </div>
+              <div class="row">
+                <div class="col">Numéro de sécurité sociale :</div>
+                <div class="col" id="social_modal"></div>
               </div>
             </div>
-            <div class="modal-body h-300" >
-              <!-- MODAL CONTENT -->
-              <div class="container">
-                <div class="row my-4 w-700">
-                  <h5 class="col">
-                    Vous êtes sur le point de créer un nouveau collaborateur :
-                  </h5>
-                </div>
-                <div class="row mb-2">
-                  <div class="col">Nom :</div>
-                  <div class="col" id="name_modal"></div>
-                </div>
-                <div class="row mb-2">
-                  <div class="col">Prénom :</div>
-                  <div class="col" id="lastname_modal"></div>
-                </div>
-                <div class="row mb-2">
-                  <div class="col">Date de naissance :</div>
-                  <div class="col" id="birthday_modal"></div>
-                </div>
-                <div class="row mb-2">
-                  <div class="col">Adresse :</div>
-                  <div class="col" id="adress_modal"></div>
-                </div>
-                <div class="row" >
-                  <div class="col">Numéro de sécurité sociale :</div>
-                  <div class="col" id="social_modal"></div>
-                </div>
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                class="btn btn-secondary"
-                type="button"
-                data-dismiss="modal"
-              >
-                Annuler
-              </button>
-              <button class="btn btn-success" type="button">Confirmer</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              type="button"
+              data-dismiss="modal"
+            >
+              Annuler
+            </button>
+            <button class="btn btn-success" type="button">Confirmer</button>
           </div>
         </div>
       </div>
-    </section>
-
-
-
+    </div>
+    <!-- SCRIPT -->
     <script src="./script/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
-    <script src="./../TP 06 Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="./../TP_06_Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
   </body>
 </html>
