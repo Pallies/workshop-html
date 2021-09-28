@@ -4,19 +4,18 @@ function ClientUser(id, name, password) {
   this.password = password;
   this.createRowTable = function () {
     let tr = document.createElement("tr");
-    this.tr= this.buildTh(tr);
+    return this.buildTh(tr);
   };
   this.buildTh = function (tr) {
-    let row = tr;
     for (let i = 0; i < 3; i++) {
       let th = document.createElement("th");
       th.setAttribute("scope", "row");
-      if (i === 0) th.nodeValue = this.id;
-      if (i === 1) th.nodeValue = this.name;
-      if (i === 2) th.nodeValue = this.password;
-      row.appendChild(th);
+      if (i === 0) th.innerText = this.id;
+      if (i === 1) th.innerText = this.name;
+      if (i === 2) th.innerText = this.password;
+      tr.appendChild(th);
     }
-    return row;
+    return tr;
   };
 }
 form_userAdd.onsubmit = (e) => {
@@ -27,5 +26,5 @@ form_userAdd.onsubmit = (e) => {
   var password = form_userAdd.password.value;
   var row = new ClientUser(id, name, password);
    
-   console.log('%c⧭', 'color: #007300', row.tr);
+   console.log('%c⧭', 'color: #007300', row.createRowTable());
 };
