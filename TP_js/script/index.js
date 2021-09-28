@@ -11,12 +11,22 @@ function ClientUser(id, name, password) {
   // buildCol
   this.buildTh = function (tr) {
     for (let i = 0; i < 3; i++) {
-      let th = document.createElement("th");
-      th.setAttribute("scope", "row");
-      if (i === 0) th.innerText = this.id;
-      if (i === 1) th.innerText = this.name;
-      if (i === 2) th.innerText = this.password;
-      tr.appendChild(th);
+      let row;
+      switch (i) {
+        case 0:
+          row = document.createElement("th");
+          row.setAttribute("scope", "row");
+          row.innerText = this.id;
+          break;
+        case 1:
+          row = document.createElement("td");
+          row.innerText = this.name;
+          break;
+        case 2:
+          row = document.createElement("td");
+          row.innerText = this.password;
+      }
+      tr.appendChild(row);
     }
     return tr;
   };
