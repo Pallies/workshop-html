@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,7 @@
     <!-- NAVBAR -->
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-   <a href="./index.html" class="navbar-brand"> SGP </a>
+        <a href="./index.html" class="navbar-brand"> SGP </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -57,13 +57,18 @@
           </div>
         </div>
       </div>
-      <form action="#" method="post">
+      <form name="new_collaborater" action="#" method="post">
         <div class="container">
           <!-- ROW NAME -->
           <div class="row">
             <div class="form-group d-flex col pb-32">
               <label for="name" class="col-6"><span>Nom :</span></label>
-              <input id="name" type="text" class="form-control col-6" />
+              <input
+                id="name"
+                type="text"
+                name="name" 
+                class="form-control col-6 form-list"
+              />
             </div>
           </div>
           <!-- ROW LASTNAME -->
@@ -72,7 +77,12 @@
               <label for="firstname" class="col-6"
                 ><span class="h5">Prénom :</span></label
               >
-              <input id="firstname" type="text" class="form-control col-6" />
+              <input
+                id="firstname"
+                type="text"
+                name="firstname" 
+                class="form-control col-6 form-list"
+              />
             </div>
           </div>
           <!-- ROW DATE DE NAISSANCE -->
@@ -81,7 +91,13 @@
               <label for="birthday" class="col-6"
                 ><span class="h5">Date de naissance :</span></label
               >
-              <input type="text" id="birthday" class="form-control" />
+              <input
+                type="text"
+                id="birthday"
+                name="birthday"
+                placeholder="01/01/1970"
+                class="form-control form-list"
+              />
             </div>
           </div>
           <!-- ROW ADDRESS -->
@@ -91,9 +107,9 @@
                 ><span class="h5">Adresse</span></label
               >
               <textarea
-                name="adresse"
+                name="address"
                 id="address"
-                class="col-6 form-control"
+                class="col-6 form-control form-list"
                 cols="30"
                 rows="5"
               ></textarea>
@@ -109,7 +125,7 @@
                 type="tel"
                 name="social_security"
                 id="social_secu"
-                class="col-6 form-control"
+                class="col-6 form-control form-list"
               />
             </div>
           </div>
@@ -119,8 +135,9 @@
                 type="button"
                 class="btn btn-lg btn-success"
                 data-toggle="modal"
-                data-target="#confirm_modal"
+                id="form-valid"
               >
+                <!-- data-target="#confirm_modal" -->
                 Créer
               </button>
             </div>
@@ -153,23 +170,23 @@
               </div>
               <div class="row mb-2">
                 <div class="col">Nom :</div>
-                <div class="col" id="name_modal"></div>
+                <div class="col modal-list" id="name_modal"></div>
               </div>
               <div class="row mb-2">
                 <div class="col">Prénom :</div>
-                <div class="col" id="lastname_modal"></div>
+                <div class="col modal-list" id="lastname_modal"></div>
               </div>
               <div class="row mb-2">
                 <div class="col">Date de naissance :</div>
-                <div class="col" id="birthday_modal"></div>
+                <div class="col modal-list" id="birthday_modal"></div>
               </div>
               <div class="row mb-2">
                 <div class="col">Adresse :</div>
-                <div class="col" id="adress_modal"></div>
+                <div class="col modal-list" id="adress_modal"></div>
               </div>
               <div class="row">
                 <div class="col">Numéro de sécurité sociale :</div>
-                <div class="col" id="social_modal"></div>
+                <div class="col modal-list" id="social_modal"></div>
               </div>
             </div>
           </div>
@@ -181,7 +198,11 @@
             >
               Annuler
             </button>
-            <button class="btn btn-success" type="button">Confirmer</button>
+            <a href="./index.html">
+              <button class="btn btn-success" id="modalSubmit" type="button">
+                Confirmer
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -190,5 +211,7 @@
     <script src="./script/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
     <script src="./../TP_06_Bootstrap/packages/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+    <script src="./script/creer-controls.js"></script>
+    <script src="./script/creer.js"></script>
   </body>
 </html>
