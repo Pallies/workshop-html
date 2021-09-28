@@ -1,11 +1,14 @@
+// Create new table row
 function ClientUser(id, name, password) {
   this.id = id;
   this.name = name;
   this.password = password;
+  // buildRow
   this.createRowTable = function () {
     let tr = document.createElement("tr");
     return this.buildTh(tr);
   };
+  // buildCol
   this.buildTh = function (tr) {
     for (let i = 0; i < 3; i++) {
       let th = document.createElement("th");
@@ -18,6 +21,11 @@ function ClientUser(id, name, password) {
     return tr;
   };
 }
+// clear Form
+function resetForm() {
+  form_userAdd.name.value = "";
+  form_userAdd.password.value = "";
+}
 form_userAdd.onsubmit = (e) => {
   e.preventDefault();
   var lastElement = document.querySelectorAll("tr");
@@ -25,6 +33,6 @@ form_userAdd.onsubmit = (e) => {
   var name = form_userAdd.name.value;
   var password = form_userAdd.password.value;
   var row = new ClientUser(id, name, password);
-   
-   console.log('%c⧭', 'color: #007300', row.createRowTable());
+  lastElement[--id].parentElement.appendChild(row.createRowTable());
+  resetForm();
 };
