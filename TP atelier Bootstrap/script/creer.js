@@ -5,22 +5,21 @@ var btn_create = document.getElementById("form-valid");
 // Champs
 var forms = document.querySelectorAll(".form-list");
 var modals = document.querySelectorAll(".modal-list");
-var User = {};
+var newUser = {};
 var errors = [];
 
 // save in locaStore
 var saveToLocalStorage = function () {
   $("#confirm_modal").modal("hide");
-  // for (let [key, value] of Object.entries(User)) {
-  //   localStorage.setItem(key, value);
-  // }
-  localStorage.setItem(users.length,JSON.stringify(User))
+
+  var index = users.length+localStorage.length
+  localStorage.setItem(index,JSON.stringify(newUser))
 };
 
 // form in Modal
 var transfertInfoUserToModal = function () {
   forms.forEach((form, i) => {
-    User[form.name] = form.value;
+    newUser[form.name] = form.value;
     modals[i].innerHTML = form.value;
     errors.push(formIsValide(form));
   });

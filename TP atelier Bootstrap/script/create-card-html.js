@@ -44,6 +44,7 @@ var createCardSpecifie = function (description, state) {
   return div;
 };
 var createCardBody = function (obj) {
+
   // <div class="card-body d-flex"> ligne 134 index.html
   var divPrinc = document.createElement("div");
   divPrinc.className = "card-body d-flex";
@@ -53,7 +54,7 @@ var createCardBody = function (obj) {
   img.className = "card-img-top";
   img.setAttribute("src", obj.image);
   img.setAttribute("alt", "photo user");
-  divImg.appendChild(img); //TODO rattacher divImg
+  divImg.appendChild(img);
 
   // <div class="col"> ligne 142 index.html
   var divMiddle = document.createElement("div");
@@ -72,6 +73,7 @@ var createCardBody = function (obj) {
   alink.setAttribute("href", "./editer.html");
   var btn = document.createElement("button");
   btn.className = "btn btn-danger btn-edition";
+  btn.setAttribute('id','btn-edit')
   var btnText = document.createTextNode("Editer");
 
   //  rattachement à la div de fin

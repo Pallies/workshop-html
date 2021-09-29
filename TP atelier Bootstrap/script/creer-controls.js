@@ -1,7 +1,6 @@
 var FORM_KEY = ["name", "firstname", "birthday", "address", "social_security"];
 
 var formIsValide = function (form) {
-  console.log("%c⧭", "color: #00ff88", form.value);
   switch (form.name) {
     case FORM_KEY[0]:
     case FORM_KEY[1]:
