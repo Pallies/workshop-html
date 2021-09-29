@@ -14,7 +14,7 @@ var saveToLocalStorage = function () {
   // for (let [key, value] of Object.entries(User)) {
   //   localStorage.setItem(key, value);
   // }
-  localStorage.setItem(`{User.name}`,JSON.stringify(User))
+  localStorage.setItem(users.length,JSON.stringify(User))
 };
 
 // form in Modal

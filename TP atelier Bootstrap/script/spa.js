@@ -1,10 +1,10 @@
+
+
 // APPLICATION IS READY ....!  then do it ;)
 $(function () {
-    users.forEach((user) => {
-      var test = builderCard(user);
-      console.log("%c⧭", "color: #006dcc", test);
-      $("#users-cards").append(test);
-    });
-
-  console.log("%c⧭", "color: #e57373", ",gfh,f");
+  users.forEach((user, i) => {
+    // build user's CARD
+    var test = builderCard(new User(i+1,user));
+    $("#users-cards").append(test);
+  });
 });
