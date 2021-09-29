@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/Pallies/workshop-html#readme",
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^4.0.0",
     "jquery": "^3.6.0"
   },
   "devDependencies": {
