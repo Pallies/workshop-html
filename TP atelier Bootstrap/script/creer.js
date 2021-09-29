@@ -1,5 +1,3 @@
-
-
 // Events
 var btn_comfirm = document.getElementById("modalSubmit");
 var btn_create = document.getElementById("form-valid");
@@ -8,14 +6,15 @@ var btn_create = document.getElementById("form-valid");
 var forms = document.querySelectorAll(".form-list");
 var modals = document.querySelectorAll(".modal-list");
 var User = {};
-var errors =[];
+var errors = [];
 
 // save in locaStore
 var saveToLocalStorage = function () {
   $("#confirm_modal").modal("hide");
-  for (let [key, value] of Object.entries(User)) {
-    localStorage.setItem(key, value);
-  }
+  // for (let [key, value] of Object.entries(User)) {
+  //   localStorage.setItem(key, value);
+  // }
+  localStorage.setItem(`{User.name}`,JSON.stringify(User))
 };
 
 // form in Modal
@@ -25,15 +24,14 @@ var transfertInfoUserToModal = function () {
     modals[i].innerHTML = form.value;
     errors.push(formIsValide(form));
   });
-  errors.forEach(e=>{
+  errors.forEach((e) => {
     // TODO gestion des erreurs
-    console.log('%c⧭', 'color: #f279ca', e);
-  })
+    console.log("%c⧭", "color: #f279ca", e);
+  });
   $("#confirm_modal").modal("show");
 };
 
 // Elements to Events
 btn_create.addEventListener("click", transfertInfoUserToModal);
 btn_comfirm.addEventListener("click", saveToLocalStorage);
-
 
