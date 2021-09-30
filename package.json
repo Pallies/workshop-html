@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Pallies/workshop-html#readme",
   "dependencies": {
     "bootstrap": "^4.0.0",
-    "jquery": "^3.6.0"
+    "jquery": "^3.6.0",
+    "popper": "^1.0.1"
   },
   "devDependencies": {
     "node-sass": "^6.0.1"
