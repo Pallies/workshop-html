@@ -108,50 +108,57 @@
             </div>
           </section>
           <!-- LANGUAGES INFORMATIQUES -->
-          <section class="skill">
-            <h3 class="text-uppercase pl-5">
+          <section id="languages" class="skill">
+            <h3 class="text-uppercase pl-4">
               languages <br /><span style="margin: 0 3rem !important">de</span
               ><br />programmation
             </h3>
             <div class="container-fluid">
-              <div class="row d-flex ">
-                <h4 id="languages" class="extend text-capitalize mt-4 col-2">
-                  java
+              <div class="row d-flex">
+                <h4 data="4" class="extend text-capitalize mt-2 col-4">java</h4>
+              </div>
+              <div class="row d-flex">
+                <h4 data="5" class="extend text-capitalize mt-2 col-4">
+                  javascript
                 </h4>
-                <svg class="icon icon-radio-unchecked eval col-1 ">
-                  <use
-                    xlink:href="./svg/symbol-defs.svg#icon-radio-unchecked"
-                  ></use></svg
-                ><svg class="icon icon-radio-unchecked eval col-1 ">
-                  <use
-                    xlink:href="./svg/symbol-defs.svg#icon-radio-unchecked"
-                  ></use></svg
-                ><svg class="icon icon-radio-unchecked eval col-1 ">
-                  <use
-                    xlink:href="./svg/symbol-defs.svg#icon-radio-unchecked"
-                  ></use></svg
-                ><svg class="icon icon-radio-unchecked eval col-1 ">
-                  <use
-                    xlink:href="./svg/symbol-defs.svg#icon-radio-unchecked"
-                  ></use></svg
-                ><svg class="icon icon-radio-unchecked eval col-1 ">
-                  <use
-                    xlink:href="./svg/symbol-defs.svg#icon-radio-unchecked"
-                  ></use>
-                </svg>
+              </div>
+              <div class="row d-flex">
+                <h4 data="4" class="extend text-capitalize mt-2 col-4">
+                  html/css
+                </h4>
+              </div>
+              <div class="row d-flex">
+                <h4 data="3" class="extend text-capitalize mt-2 col-4">
+                  unix/linux
+                </h4>
               </div>
             </div>
-            <h4 class="extend text-capitalize mt-2">javascript</h4>
-            <h4 class="extend text-capitalize mt-2">html / css</h4>
-            <h4 class="extend text-capitalize mt-2">unix / linux</h4>
           </section>
           <!-- FRAMEWORK -->
-          <section class="skill">
+          <section id="frameworks" class="skill">
             <h3 class="text-uppercase pl-5">frameworks</h3>
-            <h4 id="frameworks" class="extend text-capitalize mt-4">angular</h4>
-            <h4 class="extend text-capitalize mt-2">electron</h4>
-            <h4 class="extend text-capitalize mt-2">bootstrap</h4>
-            <h4 class="extend text-capitalize mt-2">nodejs</h4>
+            <div class="container-fluid">
+              <div class="row d-flex">
+                <h4 data="5" class="extend text-capitalize mt-4 col-4">
+                  angular
+                </h4>
+              </div>
+              <div class="row d-flex">
+                <h4 data="4" class="extend text-capitalize mt-2 col-4">
+                  electron
+                </h4>
+              </div>
+              <div class="row d-flex">
+                <h4 data="4" class="extend text-capitalize mt-2 col-4">
+                  bootstrap
+                </h4>
+              </div>
+              <div class="row d-flex">
+                <h4 data="3" class="extend text-capitalize mt-2 col-4">
+                  nodejs
+                </h4>
+              </div>
+            </div>
           </section>
           <!-- FORMATION -->
           <section class="skill">
@@ -379,12 +386,14 @@
               <p class="extend ml-5">
                 <span class="ml-4">Le</span> trail running est une activité
                 sportive qui associe la course à pied et les dénivelés sur
-                n'importe quelle surface non goudronnée
+                n'importe quelle surface non goudronnée.
               </p>
             </div>
             <div class="my-5">
               <h4 class="extend my-1 ml-5">Echecs</h4>
-              <p class="extend ml-5"><span class="ml-4">1600</span>-1800 elo</p>
+              <p class="extend ml-5">
+                <span class="ml-4">~ 1600</span>-1800 elo
+              </p>
             </div>
             <div class="my-5">
               <h4 class="extend my-1 ml-5">Dessin</h4>
@@ -392,6 +401,90 @@
                 <span class="ml-4">Réalisation</span> de dessin Pastel (crayons
                 et baton) sur papier canson.
               </p>
+            </div>
+            <div class="my-5">
+              <div
+                id="paintCarousel"
+                class="carousel slide carousel-dark"
+                data-ride="carousel"
+              >
+                <div class="carousel-indicators">
+                  <button
+                    class="px-3 mx-1"
+                    type="button"
+                    data-target="#paintCarousel"
+                    data-slide-to="0"
+                    aria-current="true"
+                    aria-label="1"
+                  ></button>
+                  <button
+                    class="px-3 mx-1"
+                    type="button"
+                    data-target="#paintCarousel"
+                    data-slide-to="1"
+                    aria-label="2"
+                  ></button>
+                  <button
+                    class="px-3 mx-1"
+                    type="button"
+                    data-target="#paintCarousel"
+                    data-slide-to="2"
+                    aria-label="3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="./images/magnolia.jpg"
+                      class="d-block w-100"
+                      alt="Branche de magnolia"
+                    />
+                    <div class="carousel-caption d-none d-md-block"></div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="./images/fruits.jpg"
+                      class="d-block w-100"
+                      alt="Coupe de fruits"
+                    />
+                  </div>
+
+                  <div class="carousel-item">
+                    <img
+                      src="./images/coquillage.jpg"
+                      class="d-block w-100"
+                      alt="Coquillage"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="carousel-control-prev"
+                  type="button"
+                  data-target="#paintCarousel"
+                  data-slide="prev"
+                  hidden
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Précédent</span>
+                </button>
+                <button
+                  class="carousel-control-next"
+                  type="button"
+                  data-target="#paintCarousel"
+                  data-slide="next"
+                  hidden
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="visually-hidden">Suivant</span>
+                </button>
+              </div>
             </div>
             <div class="my-5">
               <h4 class="extend my-1 ml-5">Programmation</h4>
@@ -416,7 +509,7 @@
     <script src="./../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="./script/popper.min.js"></script>
     <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./script/toggleChecked.js"></script>
     <script src="./script/insert-svg.js"></script>
-    <script src="./script/create-line-icon.js"></script>
   </body>
 </html>

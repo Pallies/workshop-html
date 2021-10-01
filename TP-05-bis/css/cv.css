@@ -76,15 +76,17 @@ aside {
       width: 1.5rem;
       height: 1.5rem;
       padding: 0;
-      align-self: flex-end;
-      justify-items: space-evenly; }
+      margin: 0;
+      align-self: flex-end; }
   aside hr {
     height: 6px;
     width: 75%; }
   aside .extend {
     width: 100%; }
   aside h4.extend {
-    margin-left: 58px !important; }
+    width: 80%;
+    margin-left: 10px !important;
+    margin: 0 20px !important; }
 
 section.profile {
   background-color: #ffcb05;
@@ -103,3 +105,14 @@ h5.date {
 
 a.text-deco-none {
   text-decoration: none; }
+
+section#languages div.row,
+section#frameworks div.row {
+  justify-content: space-evenly !important; }
+
+.carousel-indicators button {
+  padding-top: 1px !important;
+  background-color: rgba(255, 255, 255, 0.247); }
+
+.carousel-indicators button .active {
+  background-color: rgba(255, 255, 255, 0.575); }
