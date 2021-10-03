@@ -47,7 +47,7 @@ h1 span.nom {
     width: 280px !important; }
 
 figure img#photo-user {
-  height: 300px;
+  height: 280px;
   width: 250px; }
 
 h3 {
@@ -92,13 +92,28 @@ section.profile {
   background-color: #ffcb05;
   height: 200px; }
 
-section.diviser::after {
-  background-color: #ffcb05;
-  content: " ";
-  margin: 0 50%;
-  display: inline-block;
-  height: 100%;
-  width: 2px; }
+section.diviser {
+  position: relative; }
+  section.diviser:not(section.diviser.prems) {
+    margin-top: 10px !important; }
+    section.diviser:not(section.diviser.prems) svg.icon {
+      transform: translate(-50%, -8%) !important; }
+  section.diviser svg.icon {
+    width: 1rem;
+    fill: rgba(33, 34, 38, 0.75);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -35%);
+    z-index: 25; }
+  section.diviser::after {
+    background-color: #ffcb05;
+    content: " ";
+    margin: 0 50%;
+    display: inline-block;
+    height: 100%;
+    width: 2px;
+    transform: translateX(-50%); }
 
 h5.date {
   color: grey; }

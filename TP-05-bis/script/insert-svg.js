@@ -1,6 +1,14 @@
 // icons different
 var check = `icon-radio-checked`;
 var uncheck = `icon-radio-unchecked`;
+var addSvgElement = function (el) {
+  var svg = `<svg class="icon offset-2 col-4">
+                  <use
+                    xlink:href="./svg/symbol-defs.svg#icon-radio-checked2"
+                  ></use>
+                </svg>`;
+  $(el).append(svg);
+};
 // function buid svg icon
 var queryBuilderSvg = function (el, elIndex, nb) {
   //   search in container-fluid => h4 child
@@ -90,9 +98,6 @@ $(function () {
         }
       }
     });
-  var myCarousel = document.querySelector("#myCarousel");
-  var carousel = new bootstrap.Carousel(myCarousel, {
-    interval: 2000,
-    wrap: false,
-  });
+ 
+ addSvgElement(".separate");
 });
