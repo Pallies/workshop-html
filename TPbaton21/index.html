@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu des Batons</title>
+    <link
+      rel="stylesheet"
+      href="./../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./../node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <header>
+    <nav class="navbar navbar-dark bg-dark" style="text-align: center">
+      <a class="navbar-brand col-12" style="color: goldenrod" href="#"
+        >Le Jeu des Batons</a
+      >
+      <ul class="nav nav-pills col-12 justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link " data-bs-toggle="tab">Disabled link</a>
+        </li>
+        <li class="nav-item">
+          <a id="new-game"class="nav-link active" data-bs-toggle="tab" href="#" onclick="deleted(1,true)">Nouvelle Partie</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-bs-toggle="tab" href="#">Disabled link</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="container-fluid d-flex">
+      <section class="col-3">
+        <div
+          class="container d-flex justify-content-center align-items-center"
+          style="height: 100%"
+        >
+          Section Joueur
+        </div>
+      </section>
+      <section class="col-6">
+        <div class="container baton_box">
+          <div class="row mt-3 py-4">
+            <h3 class="d-block text-center">Voulez vous jouer une Partie ?</h3>
+            <!-- <h3 class="d-block text-center">
+                    Nombre de baton que vous voulez enlever ?
+                  </h3> -->
+            <!-- <h3 class="d-block text-center">A mon tour de jouer</h3> -->
+            <!-- <h3 class="d-block text-center">C'est à votre tour !</h3> -->
+            <!-- <h3>A vous de jouer, mais sa sent la défaite</h3> -->
+            <!-- <h3>Une autre partie ?</h3> -->
+          </div>
+          <div
+            class="row bg-light border border-top justify-content-center mt-5"
+          >
+            <div
+              class="
+                baton_content
+                d-flex
+                justify-content-center
+                align-items-center
+              "
+              style="height: 200px"
+            ></div>
+          </div>
+          <div
+            class="row py-5 mx-auto mw-100"
+            style="width: max-content; height: 3em"
+          >
+            <!-- Cliquer pour enlever le nombre de baton de votre choix -->
+            <!-- Attendez je réfléchi ... -->
+          </div>
+          <div class="row justify-content-between pt-3">
+            <button
+              type="button"
+              class="btn btn-primary col-3"
+              onclick="deleted(1)"
+            >
+              1
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary col-3"
+              onclick="deleted(2)"
+            >
+              2
+            </button>
+            <button
+              type="button"
+              class="btn btn-primary col-3"
+              onclick="deleted(3)"
+            >
+              3
+            </button>
+          </div>
+          <div class="row my-3 justify-content-end" style="color: grey">
+            *Cliquez sur le bouton de votre choix
+          </div>
+        </div>
+      </section>
+      <section class="col-3">
+        <div
+          class="container d-flex justify-content-center align-items-center"
+          style="height: 100%"
+        >
+          Section IA
+        </div>
+      </section>
+    </div>
+  </main>
+  <body>
+    <script src="./../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./script/baton-factory.js"></script>
+    <script src="./script/initialized.js"></script>
+  </body>
+</html>
