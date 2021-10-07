@@ -1,3 +1,46 @@
+.navbar-brand {
+  height: 5rem;
+  font-size: xx-large;
+  text-transform: uppercase;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(34, 34, 51, 0.24);
+}
+ul {
+  // width: min-content;
+  font-size: 1.5em;
+
+  .nav-item {
+    &1,
+    &2 {
+      border-right: #223;
+    }
+    &3,
+    &2 {
+      border-left: #223;
+    }
+    &1 #score-joueur,
+    &3 #score-ia {
+      color: crimson !important;
+      background-color: azure;
+      padding: 1.5em;
+      font-weight: bolder;
+    }
+    #new-game {
+      padding: 1.5em;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      &:not(.active) {
+        cursor: pointer;
+        color: goldenrod;
+      }
+    }
+    border: 5px solid goldenrod;
+  }
+}
 .icon {
   display: inline-block;
   width: 5em;
@@ -13,6 +56,31 @@
   height: 5em;
   stroke-width: 0;
   stroke: currentColor;
-  fill: ghostwhite!important;
+  fill: ghostwhite !important;
   transform: rotate(90deg);
+}
+.tour-de-jeu {
+  border: 0.2em solid aquamarine;
+}
+section.joueur-box {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5em;
+  font-weight: 900;
+  color: azure;
+  & #partie-ia {
+    background: url("./../images/xiaomi-ia-4.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    background-position: center;
+    transform: translate(0.1em, 0.1em);
+  }
+  & #partie-joueur {
+    background: url("./../images/berger-australien.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-origin: content-box;
+    background-position: center;
+    transform: translate(0.1em, 0.1em);
+  }
 }

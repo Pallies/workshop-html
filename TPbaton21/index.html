@@ -20,27 +20,34 @@
       <a class="navbar-brand col-12" style="color: goldenrod" href="#"
         >Le Jeu des Batons</a
       >
-      <ul class="nav nav-pills col-12 justify-content-center">
-        <li class="nav-item">
-          <a class="nav-link " data-bs-toggle="tab">Disabled link</a>
+      <ul class="nav nav-pills bg-dark col-12 justify-content-center">
+        <li class="nav-item nav-item1">
+          <a class="nav-link" id="score-joueur"></a>
         </li>
-        <li class="nav-item">
-          <a id="new-game"class="nav-link active" data-bs-toggle="tab" href="#" onclick="deleted(1,true)">Nouvelle Partie</a>
+        <li class="nav-item justify-self-strech nav-item2">
+          <a
+            id="new-game"
+            class="nav-link  active"
+            data-bs-toggle="tab"
+            onclick="deleted(1,true)"
+            >Nouvelle Partie</a
+          >
         </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#">Disabled link</a>
+        <li class="nav-item nav-item3">
+          <a class="nav-link" id="score-ia">10</a>
         </li>
       </ul>
     </nav>
   </header>
   <main>
     <div class="container-fluid d-flex">
-      <section class="col-3">
+      <section class="col-3 joueur-box">
         <div
-          class="container d-flex justify-content-center align-items-center"
+         id="partie-joueur"
+          class="container d-flex justify-content-center align-items-end tour-de-jeu"
           style="height: 100%"
         >
-          Section Joueur
+          Joueur
         </div>
       </section>
       <section class="col-6">
@@ -77,23 +84,26 @@
           </div>
           <div class="row justify-content-between pt-3">
             <button
+            id="btn-baton-1"
               type="button"
               class="btn btn-primary col-3"
-              onclick="deleted(1)"
+              onclick="deletedBaton(1)"
             >
               1
             </button>
             <button
+            id="btn-baton-2"
               type="button"
               class="btn btn-primary col-3"
-              onclick="deleted(2)"
+              onclick="deletedBaton(2)"
             >
               2
             </button>
             <button
+            id="btn-baton-3"
               type="button"
               class="btn btn-primary col-3"
-              onclick="deleted(3)"
+              onclick="deletedBaton(3)"
             >
               3
             </button>
@@ -103,9 +113,10 @@
           </div>
         </div>
       </section>
-      <section class="col-3">
+      <section class="col-3 joueur-box">
         <div
-          class="container d-flex justify-content-center align-items-center"
+        id="partie-ia"
+          class="container d-flex justify-content-center align-items-end "
           style="height: 100%"
         >
           Section IA
