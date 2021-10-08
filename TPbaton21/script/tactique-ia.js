@@ -1,4 +1,28 @@
-/** Détermine la tactique
+/**
+ * spinner de réflexion IA
+ */
+function viewThinkIA(){
+var spinner=`<div class="spinner-border text-info" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>`;
+return spinner;
+}
+/**
+ * choisit un nombre aléatoire
+ * si l'IA commence la partie
+ */
+function firstPlayer() {
+  var nbAlea = 22;
+  var nb = nbreBaton();
+ 
+    while (nbAlea >= nb) {
+      nbAlea = Math.round(Math.random() * 2)+1;
+    }
+    return nbAlea;
+
+}
+
+/** détermine la tactique
  * CàD la fonction à appeler
  */
 function tourIA() {
@@ -29,6 +53,11 @@ function tactiqueGagnante(baton) {
   var nbDelete = baton == 3 ? 2 : 1;
   deletedBaton(nbDelete);
 }
+/**
+ * retourne le nombre à supprimer
+ * @param {*} nb de batons
+ * @returns deleteBaton
+ */
 function howManyDelete(nb) {
   switch (nb % 4) {
     case 0:
@@ -37,5 +66,20 @@ function howManyDelete(nb) {
       return 1;
     case 3:
       return 2;
+    default:
+      return firstPlayer();
+  }
+}
+/** lance le tour de jeu de l'IA
+ * désactive les buttons du joueur
+ */
+function playIA() {
+  if ($("#partie-ia").hasClass("tour-de-jeu")) {
+    $(".text-ia").append(viewThinkIA());
+    disabledToggleAllButton();
+    setTimeout(() => {
+      tourIA();
+       $(".text-ia").text("");
+    }, 1000);
   }
 }

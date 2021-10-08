@@ -6,7 +6,13 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(34, 34, 51, 0.24); }
+  background-color: rgba(34, 34, 51, 0.24);
+  overflow: hidden; }
+
+main {
+  height: 50%;
+  display: flex;
+  margin: 4em auto; }
 
 ul {
   font-size: 1.5em; }
@@ -63,11 +69,23 @@ section.joueur-box {
     background-size: cover;
     background-origin: content-box;
     background-position: center;
-    transform: translate(0.1em, 0.1em); }
+    transform: translate(0.2em, 0.1em); }
   section.joueur-box #partie-joueur {
     background: url("./../images/berger-australien.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-origin: content-box;
     background-position: center;
-    transform: translate(0.1em, 0.1em); }
+    transform: translate(-0.2em, -0.1em); }
+
+.baton_box h3 {
+  height: 1px; }
+
+footer {
+  height: 25%;
+  background-color: #223; }
+  footer .message-end {
+    text-transform: uppercase;
+    padding-top: 1em;
+    color: goldenrod;
+    font-size: 5rem; }

@@ -1,16 +1,22 @@
-function nbreBaton(){
+/**
+ * Calcul le nombre de baton présent
+ * @returns
+ */
+function nbreBaton() {
   return $(".baton_content").children().filter(".icon.icon-minus").length;
 }
 
 /**  Suppression des icons baton en fonction du bouton sélectionné
 la fonction prévoit une remise à zéro par l'action reset */
 function deletedBaton(nb, reset = false) {
-  // boutton nouvelle partie
-  reset
-    ? $("#new-game").addClass("active")
-    : $("#new-game").removeClass("active");
-
-    // boucle sur le nombre à modifier
+  // Boutton nouvelle partie
+  if (reset) {
+    $("#new-game").addClass("active");
+  } else {
+    $("#new-game").removeClass("active");
+    $(".message-tour").text("");
+  }
+  // Boucle sur le nombre à modifier
   for (let i = 20; i >= 0 && nb > 0; i--) {
     if (
       $(".baton_content").children().eq(i).attr("class") == "icon icon-minus" &&
@@ -26,26 +32,10 @@ function deletedBaton(nb, reset = false) {
     }
     disabledButton();
   }
+  score();
 }
-/** desactive les buttons en fonction du nombre de
- * batons restant
- */
-function disabledButton() {
-  switch (nbreBaton()) {
-    case 2:
-      $("#btn-baton-3").attr("disabled", true);
-      break;
-    case 1:
-      $("#btn-baton-2").attr("disabled", true);
-      break;
-    case 0:
-      $("#btn-baton-1").attr("disabled", true);
-      break;
-    default:
-      $("button").removeAttr("disabled");
-  }
-}
-/** ajoute l'icone baton sur l'élément en paramètre*/
+
+/** Ajoute l'icone baton sur l'élément en paramètre*/
 function addCrayonSvg(el) {
   var svgIconBaton = `
    <svg class="icon icon-minus">
@@ -53,6 +43,5 @@ function addCrayonSvg(el) {
         </use>
     </svg>
 `;
-
   $(el).append(svgIconBaton);
 }
